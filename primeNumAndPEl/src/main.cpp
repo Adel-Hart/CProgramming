@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int main(){
+int main(){ 
 
     clock_t start, end, checker; //시간 측정 초기화.
     double duration; //시간 측정 값 초기화.
