@@ -48,7 +48,7 @@
 // }
 
 // bool isPrime(int num){
-//     for(int i = 2; i < sqrt(num); i++){
+//     for(int i = 2; i <= sqrt(num); i++){ //fix error: i < sqrt(num) -> i <= sqrt(num)
 
 //         if(num % i == 0){
 //             return false;

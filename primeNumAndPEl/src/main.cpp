@@ -84,7 +84,7 @@ bool isPalin(int num, int digit){ //팰린드롬s 판별 함수.
 }
 
 bool isPrime(int num){
-    for(int i = 2; i < sqrt(num); i++){
+    for(int i = 2; i <= sqrt(num); i++){ //fix error: i < sqrt(num) -> i <= sqrt(num)
 
         if(num % i == 0){
             return false;
