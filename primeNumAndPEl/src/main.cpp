@@ -118,9 +118,8 @@ int main(){
      * 
      */
 
-    while (!isOver)
+    while (!isOver) //fix err num++ 위치 변경, 문제조건 때문 ( n "이상" 숫자)
     {
-        num++;
 
         checker = clock(); //소요 시간 중간 확인.
 
@@ -134,10 +133,12 @@ int main(){
 
          
         if(!isPalin(num, getDigit(num))){
+            num++;
             continue; //펠린드롬이 아니면 다음 숫자로 넘어감.   
         }
 
         if(!isPrime(num)){
+            num++;
             continue; //소수가 아니면 다음 숫자로 넘어감.
         }
 
