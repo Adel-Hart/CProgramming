@@ -147,7 +147,7 @@ int main(){
 
     end = clock(); //시간 측정 종료.
 
-    cout << "Time : " << (double)(end - start) / CLOCKS_PER_SEC << "s" << endl; //소요 시간 출력.
+    // cout << "Time : " << (double)(end - start) / CLOCKS_PER_SEC << "s" << endl; //소요 시간 출력.
 
     return 0;
 }
