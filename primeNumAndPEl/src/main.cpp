@@ -50,7 +50,7 @@ bool isPalin(int num, int digit){ //팰린드롬s 판별 함수.
             
         for (int i = 0; i < cycle; i++) {
             if(digitArry[cycle -1 - i] != digitArry[cycle + 1 + i]){
-                delete digitArry; //사용 후 메모리 해제
+                delete[] digitArry; //사용 후 메모리 해제
                 return false;
             }
             /*
@@ -63,7 +63,7 @@ bool isPalin(int num, int digit){ //팰린드롬s 판별 함수.
         }
         
 
-        delete digitArry; //사용 후 메모리 해제
+        delete[] digitArry; //사용 후 메모리 해제
 
         return true;
 
@@ -73,17 +73,22 @@ bool isPalin(int num, int digit){ //팰린드롬s 판별 함수.
         
         for (int i = 0; i < cycle; i++) {
             if(digitArry[cycle - 1 - i] != digitArry[cycle + i]){
-                delete digitArry; //사용 후 메모리 해제
+                delete[] digitArry; //사용 후 메모리 해제
                 return false;
             } //홀수는 가운데에 숫자가 없어서, 위 로직에서 뒤에꺼 +1이 없음.
     
         }
-        delete digitArry; //사용 후 메모리 해제
+        delete[] digitArry; //사용 후 메모리 해제
         return true; 
     }
 }
 
 bool isPrime(int num){
+
+    if(num == 1){
+        return false;
+    }
+
     for(int i = 2; i <= sqrt(num); i++){ //fix error: i < sqrt(num) -> i <= sqrt(num)
 
         if(num % i == 0){
@@ -143,6 +148,7 @@ int main(){
         }
 
         cout << num << endl; //펠린드롬 and 소수를 만족하는 작은 숫자 출력.
+        isOver = true; //종료 조건.
         break;
     }
 
